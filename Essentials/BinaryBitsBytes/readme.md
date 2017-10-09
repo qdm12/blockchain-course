@@ -35,7 +35,7 @@ We would have these hands:
 
 [![Two alien-like hands with numbers](images/hands_alien.png)]()
 
-Then we most likely would count in **penta**mal instead of **dec**imal, like that:
+Then we most likely would count in **penta**l instead of **dec**imal, like that:
 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15, 20, 21 ...
 
 ## Binary
@@ -116,7 +116,7 @@ A byte is just **8 bits**. So it could 10010111 for example.
 
 Why? **History** and **alphabet** mostly.
 
-This thing
+This old IBM thing
 
 [![IBM 360](images/ibm360.png)]()
 
@@ -131,3 +131,32 @@ made the 8 bit famous. And we kept using the *byte* since then really.
 
 Today we measure a lot of things in **bytes** such as data storage size, although we keep using **bits** for internet speeds for example.
 Note that today, most of the CPUs are not 8 bit anymore, but 64 bit.
+
+
+## FINAL BUT IMPORTANT: Security bits
+For blockchain, you **MUST** understand that core element.
+
+### Digits lock example
+That's a lock with 4 digits:
+
+[![4 digits lock](images/lock_digits.png)]()
+
+With 4 digits, there are 10 x 10 x 10 x 10 = 10^4 = 10,000 possibile combinations. 
+
+You can express this in binary, with bits, using that weird formula:
+
+[![log of base 2 of 10,000](images/maths1.png)]() = **13.288 bits**
+
+We say that this lock has a security of 13.288 bits.
+The other way around, 13.288 bits allows for 2^13.288 = 10,000 possible combinations.
+
+### Password example
+Let your password be 10 alphabetical characters long.
+There are 26 letters in the English alphabet. 
+There are therefore 26 x 26 x ... x 26 = 26^10 = 141,167,095,653,376 possible combinations.
+This is equivalent to log(141,167,095,653,376) / log(2) = **47 bits** of security.
+This is better than the lock, right? Well it's still unsafe today. 
+
+## Bitcoin
+In Bitcoin, most of the security is at least 256 bits. That means there are 2^256 possible combinations.
+That is larger than the **number of atoms in the universe**. So it's *safe* for now.
