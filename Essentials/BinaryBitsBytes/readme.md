@@ -152,11 +152,15 @@ The other way around, 13.288 bits allows for 2^13.288 = 10,000 possible combinat
 
 ### Password example
 Let your password be 10 alphabetical characters long.
+
 There are 26 letters in the English alphabet. 
+
 There are therefore 26 x 26 x ... x 26 = 26^10 = 141,167,095,653,376 possible combinations.
+
 This is equivalent to log(141,167,095,653,376) / log(2) = **47 bits** of security.
 This is better than the lock, right? Well it's still unsafe today. 
 
 ## Bitcoin
 In Bitcoin, most of the security is at least 256 bits. That means there are 2^256 possible combinations.
+
 That is larger than the **number of atoms in the universe**. So it's *safe* for now.
