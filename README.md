@@ -18,8 +18,6 @@
 
 From this table is generated a nice diagram for you to decide where to start but actually diggint in the Bitcoin protocol.
 
-![Knowledge prerequisites dependencies](images/dependencies.png)
+[![Knowledge prerequisites dependencies](images/dependencies.png)](#Bitcoin)
 
-You can therefore start by one of the following:
-- [Binary, bits and bytes](BinaryBitsBytes)
-- [Peer-to-peer network](PeerToPeerNetwork)
+You should therefore start with [binary, bits and bytes](Essentials/BinaryBitsBytes)

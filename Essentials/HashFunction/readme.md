@@ -1,0 +1,1 @@
+hash + python, comparison with poop
