@@ -1,13 +1,15 @@
 # Binary, bits and bytes
 
 ## Data
-**Anything** is, somehow, just data. It can be *very long* data, such as all the data to describe a person, or it can be *very short*, such as the age of someone.
+**Anything** is, somehow, just data. 
+- It can be *very long* data, such as all the data to describe a person
+- Or it can be *very short*, such as the age of someone
 
 Let me just remind you something simple. We still today store information in books and we need two *formulas* for this storage:
 - The **writing** formula, that we learn at school
 - The **reading** formula, that we also learn at school
 
-Now let's talk about raccoons. An image is data. With the appriopriate conversions and conventions, it can actually be expressed as a very long number.
+Now let's talk about *raccoons*. An image is data. With the appriopriate conversions and conventions, it can actually be expressed as a **very long number**.
 Take this picture
 
 [![Raccoon](images/raccoon.png)]()
@@ -16,7 +18,7 @@ Similarly to books, this raccoon can be stored with:
 - A formula converting all the colors and all the geometry in a big number that we name **N**
 - A formula converting **N** back in the original picture
 
-This big number **N** is the image in its "number" format.
+This big number **N** is the image in its "number" format (or *raw data*).
 
 ## Our lovely decimals and our two hands
 Let's start easy.
@@ -50,15 +52,19 @@ If you need more explanation, here is our favourite hand:
 [![On Off Fingers](images/2fingers.png)]()
 
 We use 0, 1, 2, ..., 9. Computers use this way less fashion **0** and **1**.
-That's because electricity is easily turned off or on, matching the 0 or the 1.
-Plus you can surprisingly do pretty much everything with a lot of 0s and 1s.
 
-Going a bit more in depth, a computer is made of these:
+That's because electricity is easily turned **off** or **on**, matching the 0 or the 1.
+
+Having an *OFF* (0) and *ON* (1) state is also more **error resistant** than higher bases such as decimal.
+Plus you can surprisingly do *pretty much everything* with a lot of *0s* and *1s*.
+
+Going a bit more in depth, a computer's brain is made of these:
 
 [![Large transistor](images/transistor_large.png)]()
 
-That's a transistor we now use for example in *electronic toys*. 
-Transistors work thanks to physics and chemistry...
+That's a transistor we now use for example in *electronic toys*.
+
+Just so you know, transistors work thanks to physics and chemistry somehow
 
 [![Large transistor](images/transistor_scheme.png)]()
 
@@ -66,31 +72,31 @@ Depending on electricity in one of their 3 pins (inputs):
 - they will let the current go through them - that gives the **1**
 - they won't - that gives the **0**
 
-Now these *transistors * are nanometric and look more like these:
+Since the 1990's, these *transistors* are in the nanometric range and look more like these:
 
 [![Nanometric transistors](images/transistor_nanometric.png)]()
 
 But in the end, they are just billions of these all interconnected:
 
-[![On Off switch](images/switch.png)]()
+[![Many switches](images/switchmany.png)]()
 
 ## Bits
 You've heard of *digits*?
 Well **bits** are the binary version of *digits*.
-
-A digit can be: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-A bit can be: 0, 1
+- A digit can be: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+- A bit can be: 0, 1
 
 Now computers tend to process bits in chunks, not one by one anymore.
 
 We, humans, do the same: we do not only use digits but we also use *numbers* to go faster.
+
 For example: 234 = 2 x 10^2 + 3 x 10^1 + 4 x 10^0 = 2 x 100 + 3 x 10 + 4 x 1 = 234
 
 The same works for binary, but it's on a **base 2** instead of a **base 10** so for example:
 
 [![Count in binary](images/binary_count.png)]()
 
-Going further with this method, we count as shown in this table:
+Going further with this method, binary counts as shown in this table (you can ignore *pental* and *octal*):
 
 | Binary | Decimal | Pental (5) | Octal (8) |
 | ------ | ------- | ---------- | --------- |
@@ -123,7 +129,7 @@ This old IBM thing
 back in the days introduced the byte. 
 We also realised that our alphabet and all the necessary symbols could be contained in *8 bits* - or a **byte** - because of the 2^8 = 256 possible combinations.
 
-Plus this Intel thing back in the 70s
+Plus this Intel processor chip (*CPU*) back in the 70s
 
 [![Intel 8080 8 bit CPU](images/intel8080.png)]()
 
@@ -133,8 +139,8 @@ Today we measure a lot of things in **bytes** such as data storage size, althoug
 Note that today, most of the CPUs are not 8 bit anymore, but 64 bit.
 
 
-## FINAL BUT IMPORTANT: Security bits
-For blockchain, you **MUST** understand that core element.
+## IMPORTANT: Security bits
+For understanding the *blockchain*, you **MUST** understand the following.
 
 ### Digits lock example
 That's a lock with 4 digits:
@@ -143,24 +149,34 @@ That's a lock with 4 digits:
 
 With 4 digits, there are 10 x 10 x 10 x 10 = 10^4 = 10,000 possibile combinations. 
 
-You can express this in binary, with bits, using that weird formula:
+You can express this in binary, with **bits**, using that weird formula:
 
-[![log of base 2 of 10,000](images/maths1.png)]() = **13.288 bits**
+[![log of base 2 of 10,000](images/maths1.png)]()
 
-We say that this lock has a security of 13.288 bits.
-The other way around, 13.288 bits allows for 2^13.288 = 10,000 possible combinations.
+We say that this lock has a *security of 13.288 bits*.
+
+The other way around, 13.288 bits allows for:
+
+[![bits to possible combinations](images/maths2.png)]()
 
 ### Password example
-Let your password be 10 alphabetical characters long.
+Let's say your password is 10 alphabetical characters long.
 
 There are 26 letters in the English alphabet. 
 
 There are therefore 26 x 26 x ... x 26 = 26^10 = 141,167,095,653,376 possible combinations.
 
-This is equivalent to log(141,167,095,653,376) / log(2) = **47 bits** of security.
-This is better than the lock, right? Well it's still unsafe today. 
+This is equivalent to:
+
+[![log of base 2 of 26^10](images/maths3.png)]()
+
+This is better than the lock, right? Well it's **unsafe today**. 
 
 ## Bitcoin
-In Bitcoin, most of the security is at least 256 bits. That means there are 2^256 possible combinations.
+In Bitcoin, most of the security is at least **256 bits** strong. 
 
-That is larger than the **number of atoms in the universe**. So it's *safe* for now.
+That means there are 2^256 possible combinations. 
+Does this seem small to you? Try it on your calculator !
+That's essentially a larger number than the **number of atoms in the universe**.
+
+So it's *safe* for now.
